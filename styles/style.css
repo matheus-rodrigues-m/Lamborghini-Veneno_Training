@@ -1,0 +1,660 @@
+/*Configurações Padrão*/
+
+:root {
+    --color-red: #e21b1b;
+    --color-dark: #151515;
+}
+
+html {
+    background-color: var(--color-dark);
+    width: 100%;
+    margin: 0;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /*Oculta o que passar da margem lateral*/    
+
+    background: var(--color-dark);
+}
+
+
+/*HEADER*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+
+    width: 100vw;
+
+    top: 0;
+
+    z-index: 20;
+}
+
+
+
+header div.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    
+    width: 100vw;
+    background-color:rgba(0, 0, 0, .3);
+    /*border-bottom: white solid 1px;*/
+
+    font-size: clamp(0.5em, 1.2vw, 3em);
+
+}
+
+
+header div.menu div.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-right: 0;
+    padding-right: 0;
+    
+    width: 65vw;
+
+}
+
+header div.menu div.text a {
+    font-family: 'Raleway';
+    color: white;
+    text-decoration: none;
+
+    justify-content: center;
+    cursor: pointer;
+
+    padding: 1%;
+    margin: 0 4%;
+    
+
+    transition: .3s ease-in-out;
+    border-bottom: rgba(255, 255, 255, 0) solid;
+}
+
+
+header div.menu div.text a:hover {
+    border-bottom: solid 1px rgba(255, 255, 255, .8);
+
+}
+
+
+header div.menu a img {
+    width: 30%;
+    padding: 2% 20%;
+}
+
+
+/*HOME*/
+
+.home {
+    background-image: url('../assets/Lamborghini_Wallpaper_1.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100%;
+    background-position: center;
+
+    
+
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    opacity: .8;
+    transition: ease-in-out .3s;
+
+    cursor: pointer;
+    top: 0;
+    margin-top: 0;
+}
+
+.home:hover {
+    opacity: 1;
+}
+
+.home .text_home {
+    font-family: 'Raleway';
+    color: white;
+    font-size:  clamp(0.5em, 4vw, 3em);
+
+    margin-top: 30vw;
+    padding-bottom: 10vw;
+    margin-left: -40vw;
+
+}
+
+
+.home .text_home h1 {
+    font-size: clamp(1em, 3vw, 3em);
+    font-weight: 300;
+}
+
+.home .text_home h4 {
+    font-size:  clamp(0.5em, .5vw, 2em);
+    font-weight: 200;
+}
+
+
+/*ABOUT_1*/
+
+.about_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    color: white;
+    padding: 3%;
+    margin-right: 50%;
+    margin-left: 3%;
+}
+
+.about_1 h3{
+    font-size: clamp(1em, 3vw, 3em);
+    font-weight: 300;
+    margin: 0;
+    padding: 3%;
+    padding-bottom: 0;
+
+    border-left: solid 2px var(--color-red);
+}
+
+.about_1 h4 {
+    font-size:  clamp(0.5em, 1.2vw, 2em);
+    font-weight: 200;
+    margin: 5% auto;
+    padding: 0 3%;
+    padding-bottom: 0;
+    
+}
+
+
+/*ABOUT*/
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.about .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10%;
+
+    transition: ease-in-out .3s;
+    cursor: pointer;
+}
+
+.about .item:hover {
+    transform: scale(1.05);
+}
+
+.about .item .item_text {
+    color: white;
+}
+
+.about .item .item_text h3 {
+    font-size: clamp(1em, 2vw, 3em);
+    font-weight: 300;
+    margin: 0 auto;
+}
+
+.about .item .item_text h4 {
+    font-size:  clamp(0.5em, .8vw, 2em);
+    font-weight: 200;
+    margin: 5% auto;
+}
+
+.about i {
+    color: var(--color-red);
+    font-size: clamp(1em, 4vw, 6em);
+    padding: 10%;
+    padding-left: 0;
+}
+
+
+
+/*TECH SPECS*/
+
+.specs {
+    color: white;
+    font-family: 'Raleway';
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-image: url('../assets/Lamborghini_Front_Half.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: right;
+    padding-bottom: 6%;
+}
+
+.specs .title h1 {
+    font-size: clamp(1em, 3vw, 3em);
+    font-weight: 300;
+    padding-left: 2%;
+    margin-left: 5%;
+
+    border-left: solid 2px var(--color-red);
+}
+
+.specs .table table {
+    font-size: clamp(.8em, 1.2vw, 3em);
+    font-weight: 200;
+    padding-left: 2%;
+
+    margin-left: 5%;
+    width: 55vw;
+}
+
+.specs .table table tbody tr td {
+    padding: 2%;
+    border-bottom: solid 1px white;
+    font-size: clamp(.8em, 1.2vw, 3em);
+}
+
+.specs .table table tbody tr td:nth-child(2){
+    font-weight: 500;
+    padding-left: 50%;
+}
+
+
+/*MORE INFO*/
+
+.info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    font-family: 'Raleway';
+}
+
+.left {
+    width: 50%;
+    margin: 0;
+    text-decoration: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left div a{
+    text-decoration: none;
+    color: white;
+}
+
+.left div a i {
+    font-size: clamp(1em, 3vw, 4em);
+    padding: 3%;
+    padding-left: 8%;
+    padding-top: 8%;
+}
+
+
+.left div a h3 {
+    font-weight: 200;
+    font-size: clamp(.8em, 2vw, 3em);
+    padding: 3%;
+    padding-left: 8%;
+}
+
+.left div a h4 {
+    font-weight: 300;
+    font-size: clamp(.6em, 1.2vw, 3em);
+    padding: 3%;
+    padding-left: 8%;
+}
+
+.left div a h4 i {
+    font-size: clamp(.6em, 1.2vw, 3em);
+}
+
+.left .item_1 {
+    background-color: var(--color-red);
+}
+
+.left .item_2 {
+    background-image: url('../assets/Lamborghini_Back_Square.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.left .item_3 {
+    background-image: url('../assets/Lamborghini_Side_Square.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.left .item_4 {
+    background-color: #e9e9e9;
+}
+
+.left .item_4 a {
+    color: var(--color-red);
+}
+
+.left .item_4 a h3 {
+    font-weight: 300;
+}
+
+.left .item_2 a h4, .left .item_3 a h4 {
+    font-size: clamp(.8em, 2vw, 3em);
+    bottom: 0;
+    margin-top: 75%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.right {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 50%;
+    height: 100%;
+
+    background-image: url('../assets/Lamborghini_Wallpaper_2_Square.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.left div {
+    opacity: .75;
+
+    transition: ease-in-out .3s;
+
+    cursor: pointer;
+}
+
+.left div:hover {
+    opacity: 1;
+
+    transform: scale(1.02);
+    z-index: 10;
+    box-shadow: 0px 0px 15px black;
+}
+
+.right {
+    opacity: .75;
+
+    transition: ease-in-out .3s;
+
+    cursor: pointer;
+}
+
+.right:hover {
+    opacity: 1;
+}
+
+
+
+/*POWER*/
+
+.power {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.power .top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    color: white;  
+    padding-bottom: 10%;
+}
+
+.power .top .item h3 {
+    font-size: clamp(1em, 3.5vw, 4em);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    opacity: .1;
+}
+
+.power .top .item .front {
+    z-index: 10;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 1;
+}
+
+.power .top .item .front h3 {
+    font-size: clamp(1em, 3vw, 3.5em);
+    font-weight: 200;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: -10%;
+    opacity: 1;
+}
+
+.power .top .item .front h4 {
+    font-size: clamp(.6em, 1vw, 3em);
+    font-weight: 200;
+    text-align: center;
+}
+
+.bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../assets/Lamborghini_Background-01.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode:soft-light;
+
+    padding-bottom: 15%;
+}
+
+.bottom img {
+    width: 80%;
+    padding-top: 10%;
+}
+
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+
+    background-color: var(--color-red);
+
+    color: black;
+    text-align: center;
+
+    padding: 2%;
+    padding-bottom: 0;
+}
+
+footer .top {
+    width: 60%;
+    border-bottom: solid 1px black;
+}
+
+footer .top h3 {
+    font-size: clamp(.6em, 1.8vw, 2em);
+    font-weight: 500;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+footer .top h3:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+footer .middle {
+    padding-top: 2%;
+    width: 30%;
+}
+
+footer .middle i {
+    padding-left: 5%;
+    font-size: clamp(.8em, 1.8vw, 2em);
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+footer .middle i:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+footer .footer_bottom {
+    width: 100%;
+}
+
+footer .footer_bottom h4 {
+    font-size: clamp(.6em, 1.8vw, 2em);
+    font-weight: 500;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+footer .footer_bottom h5 {
+    padding: 0;
+    font-size: clamp(.6em, 1vw, 2em);
+    margin-top: .5%;
+    font-weight: 500;
+}
+
+
+
+/*MEDIAQUERYS*/
+
+@media (max-width: 600px) {
+    /*ABOUT_1*/
+
+    .about_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        color: white;
+        padding: 3%;
+        /*margin-right: 50%;*/
+        margin-left: 40%;
+        width: 80%;
+    }
+
+    .about_1 h3{
+        font-size: clamp(1em, 3vw, 3em);
+        font-weight: 300;
+        margin: 0;
+        padding: 3%;
+        padding-bottom: 0;
+
+        border-left: solid 2px var(--color-red);
+    }
+
+    .about_1 h4 {
+        font-size:  clamp(0.5em, 1.2vw, 2em);
+        font-weight: 200;
+        margin: 5% auto;
+        padding: 0 3%;
+        padding-bottom: 0;
+        
+    }
+    
+    /*ABOUT*/
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 60%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .about .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        padding: 2%;
+
+        transition: ease-in-out .3s;
+        cursor: pointer;
+    }
+
+    .about .item:hover {
+        transform: scale(1.05);
+    }
+
+    .about .item .item_text {
+        color: white;
+    }
+
+    .about .item .item_text h3 {
+        font-size: clamp(1.2em, 2.8vw, 3em);
+        font-weight: 300;
+        margin: 0 auto;
+    }
+
+    .about .item .item_text h4 {
+        font-size:  clamp(.7em, 1.3vw, 2em);
+        font-weight: 200;
+        margin: 5% auto;
+    }
+
+    .about i {
+        color: var(--color-red);
+        font-size: clamp(1.5em, 4vw, 6em);
+        padding: 10%;
+        padding-left: 0;
+    }
+
+}
